@@ -15,6 +15,13 @@ describe('Feature Test:', function(){
     plane.land(airport);
     expect(airport.planes()).toContain(plane);
   });
+
+  it('blocks takeoff when weather is stormy', function(){
+    plane.land(airport)
+    spyOn(airport,'isStormy').and.returnValue(true);
+    expect(function(){ plane.takeoff();}).toThrowError('cannot takeoff during storm');
+    expect(airport.planes()).toContain(plane);
+  });
 });
 
 // unit testing plane object
@@ -53,6 +60,13 @@ describe('Airport', function(){
     airport.clearForLanding(plane);
     expect(airport.planes()).toEqual([plane]);
   });
+
+  describe('under stormy conditions',function(){
+    it('does not clear planes for takeoff', function(){
+      spyOn(airport,'isStormy').and.returnValue(true);
+      expect(function(){ airport.clearForTakeOff(plane); }).toThrowError('cannot takeoff during storm');
+    });
+  });
 });
 
 //
@@ -70,7 +84,7 @@ describe('Plane',function(){
   });
   it('can takeoff from an airport', function(){
     plane.land(airport);
-    plane.takeoff();
+    plane.takeoff(airport);
     expect(airport.clearForTakeOff).toHaveBeenCalled();
   });
 });
