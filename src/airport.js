@@ -5,7 +5,7 @@ function Airport() {
     return this._planes;
   };
 
-  this.storePlane = function(plane) {
+  this.clearForLanding = function(plane) {
     this._planes.push(plane);
   };
 };
@@ -13,6 +13,6 @@ function Airport() {
 function Plane() {
 
   this.land = function(airport) {
-    airport.storePlane(this);
+    airport.clearForLanding(this);
   };
 };
