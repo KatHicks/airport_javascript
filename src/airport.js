@@ -8,11 +8,20 @@ function Airport() {
   this.clearForLanding = function(plane) {
     this._planes.push(plane);
   };
+
+  this.clearForTakeOff = function() {
+    this._planes.pop();
+  }
 };
 
 function Plane() {
 
   this.land = function(airport) {
     airport.clearForLanding(this);
+    this._airport = airport;
   };
+
+  this.takeoff = function() {
+    this._airport.clearForTakeOff();
+  }
 };
