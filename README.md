@@ -1,5 +1,7 @@
 # Airport JS
 
+[![Build Status](https://travis-ci.org/KatHicks/airport_javascript.svg?branch=master)](https://travis-ci.org/KatHicks/airport_javascript)
+
 ```
 As an air traffic controller
 To get passengers to a destination
