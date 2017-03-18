@@ -1,6 +1,6 @@
 # Airport JS
 
-[![Build Status](https://travis-ci.org/KatHicks/airport_javascript.svg?branch=master)](https://travis-ci.org/KatHicks/airport_javascript)
+[![Build Status](https://travis-ci.org/KatHicks/airport_javascript.svg?branch=master)](https://travis-ci.org/KatHicks/airport_javascript) [![Code Climate](https://codeclimate.com/github/KatHicks/airport_javascript/badges/gpa.svg)](https://codeclimate.com/github/KatHicks/airport_javascript)
 
 ```
 As an air traffic controller
