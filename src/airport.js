@@ -20,16 +20,3 @@ Airport.prototype.clearForTakeOff = function(plane) {
 Airport.prototype.isStormy = function() {
   return (Math.random() < 0.5) ? true : false;
 };
-
-// ----------------------------------
-
-function Plane() {
-};
-
-Plane.prototype.land = function(airport) {
-  airport.clearForLanding(this);
-};
-
-Plane.prototype.takeoff = function(airport) {
-  airport.clearForTakeOff(this);
-}
